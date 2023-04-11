@@ -3,7 +3,10 @@ import { Data } from "./Data";
 
 const Profile = () => {
   const [thisUser, setThisUser] = useState("");
-  const filteredUser = Data.filter((Datum) => Datum.firstName === thisUser);
+  const filteredUser = Data.filter(
+    (Datum) =>
+      Datum.firstName.includes(thisUser) || Datum.lastName.includes(thisUser)
+  );
 
   const getUser = filteredUser.map((Datum) => {
     return (
