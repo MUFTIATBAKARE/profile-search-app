@@ -1,6 +1,4 @@
-import React from "react";
-
-const users = [
+export const Data = [
   {
     id: "60d0fe4f5311236168a109f5",
     title: "ms",
@@ -72,25 +70,3 @@ const users = [
     picture: "https://randomuser.me/api/portraits/med/men/24.jpg",
   },
 ];
-
-const Data = () => {
-  const profile = users.map((user) => {
-    return (
-      <li key={user.id}>
-        <img src={user.picture} alt="userPicture" />
-        <p>{user.id}</p>
-        <h4>
-          {user.title} {user.firstName} {user.lastName}
-        </h4>
-      </li>
-    );
-  });
-  return (
-    <div>
-      <input type="text" placeholder="Search by name..." />
-      <ul>{profile}</ul>
-    </div>
-  );
-};
-
-export default Data;

@@ -1,10 +1,12 @@
 import React from "react";
-import Data from "./Components/Data";
+import Users from "./Components/Users";
+import Profile from "./Components/Profile";
 
 const ProfileSearchApp = () => {
   return (
     <div>
-      <Data />
+      <Profile />
+      <Users />
     </div>
   );
 };
