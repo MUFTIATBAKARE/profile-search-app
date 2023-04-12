@@ -1,10 +1,11 @@
 import React from "react";
 import Users from "./Components/Users";
 import Profile from "./Components/Profile";
+import "./Styles/app.css";
 
 const ProfileSearchApp = () => {
   return (
-    <div>
+    <div className="app-container">
       <Profile />
       <Users />
     </div>

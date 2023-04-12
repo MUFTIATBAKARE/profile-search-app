@@ -12,24 +12,27 @@ const Profile = () => {
     return (
       <li key={Datum.id}>
         <img src={Datum.picture} alt="userPicture" />
-        <p>{Datum.id}</p>
-        <h4>
-          {Datum.title} {Datum.firstName} {Datum.lastName}
-        </h4>
+        <span>
+          <p>{Datum.id}</p>
+          <h4>
+            {Datum.title} {Datum.firstName} {Datum.lastName}
+          </h4>
+        </span>
       </li>
     );
   });
-
   return (
     <div>
-      <input
-        type="text"
-        placeholder="Search by name..."
-        value={thisUser}
-        onChange={(event) => {
-          setThisUser(event.target.value);
-        }}
-      />
+      <div className="input-container">
+        <input
+          type="text"
+          placeholder="Search by name..."
+          value={thisUser}
+          onChange={(event) => {
+            setThisUser(event.target.value);
+          }}
+        />
+      </div>
       <ul>{getUser}</ul>
     </div>
   );
