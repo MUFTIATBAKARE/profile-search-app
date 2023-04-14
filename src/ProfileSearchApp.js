@@ -11,7 +11,7 @@ const ProfileSearchApp = () => {
   const filteredProfiles = Data.filter((Datum) => {
     return (
       Datum.firstName.toLowerCase().includes(thisProfile.toLowerCase()) ||
-      Datum.lastName.toLowerCase().includes(thisProfile.toLowerCase)
+      Datum.lastName.toLowerCase().includes(thisProfile.toLowerCase())
     );
   });
   return (
