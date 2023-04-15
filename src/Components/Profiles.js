@@ -1,7 +1,6 @@
 import React from "react";
 
 const Profiles = ({ filteredProfiles }) => {
-  // filteredprofile to be listed out using map function
   const thisProfile = filteredProfiles.map((profile) => {
     return (
       <li key={profile.id}>

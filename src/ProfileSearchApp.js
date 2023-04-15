@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import { Data } from "./Components/Data";
 import "./Styles/app.css";
 import Profiles from "./Components/Profiles";
+import SearchProfile from "./Components/SearchProfile";
 
 const ProfileSearchApp = () => {
-  // state set to store input value
   const [thisProfile, setThisProfile] = useState("");
-  //   callBack function that will pass data from this parent component to searchList as props
 
   const filteredProfiles = Data.filter((Datum) => {
     return (
@@ -16,16 +15,10 @@ const ProfileSearchApp = () => {
   });
   return (
     <div className="app-container">
-      <div className="input-container">
-        <input
-          type="text"
-          placeholder="Search by name..."
-          value={thisProfile}
-          onChange={(event) => {
-            setThisProfile(event.target.value);
-          }}
-        />
-      </div>
+      <SearchProfile
+        thisProfile={thisProfile}
+        setThisProfile={setThisProfile}
+      />
       <Profiles filteredProfiles={filteredProfiles} />
     </div>
   );
