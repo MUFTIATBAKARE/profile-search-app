@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Data } from "./Components/Data";
-import "./Styles/app.css";
-import Profiles from "./Components/Profiles";
-import SearchProfile from "./Components/SearchProfile";
+import { Data } from "./Data";
+import "../Styles/app.css";
+import Profiles from "./Profiles";
+import SearchProfile from "./SearchProfile";
 
 const ProfileSearchApp = () => {
   const [thisProfile, setThisProfile] = useState("");
